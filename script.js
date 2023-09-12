@@ -32,13 +32,22 @@ function calculo(oper) {
     long = operacion.textContent.length;
     anterior = operacion.textContent.slice(-1);
     if (oper == '-' && 
-       (long == 0 || anterior == '*' || anterior == '/'))
+       (long == 0 || anterior == '*' || anterior == '/')) {
         display (oper);
-    if (anterior.match(valoresAceptados)) 
+       }
+    if (anterior.match(valoresAceptados)) {
        display(oper);
+    }
 }
 
 function igual() {
     operacion.textContent = resultado.textContent;
 }
+
+function punto() {
+    anterior = operacion.textContent.slice(-1);
+        if (anterior !== '.') {
+            display('.');
+        }
+    }
 
