@@ -34,7 +34,7 @@ function calculo(oper) {
     if (oper == '-' && 
        (long == 0 || anterior == '*' || anterior == '/')) {
         display (oper);
-       }
+    }
     if (anterior.match(valoresAceptados)) {
        display(oper);
     }
@@ -46,8 +46,6 @@ function igual() {
 
 function punto() {
     anterior = operacion.textContent.slice(-1);
-        if (anterior !== '.') {
-            display('.');
-        }
-    }
+        if (anterior !== '.')  display('.');
+}
 
